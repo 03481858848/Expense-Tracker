@@ -1,0 +1,23 @@
+========================================
+COPY AND PASTE THIS COMMAND IN YOUR TERMINAL:
+========================================
+
+cd Tracker-API
+dotnet run
+
+========================================
+OR USE THIS ONE-LINER:
+========================================
+
+cd C:\Users\DELL\Desktop\Expense-Tracker\Tracker-API && dotnet run
+
+========================================
+WHAT TO EXPECT:
+========================================
+1. You'll see "Building..." messages
+2. Then "Now listening on: http://localhost:5000"
+3. Keep this terminal window OPEN!
+4. Go to http://localhost:5173 and refresh your browser
+
+========================================
+

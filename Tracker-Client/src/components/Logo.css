@@ -1,0 +1,163 @@
+.logo-wrapper {
+  user-select: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expense-logo {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.expense-logo:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.logo-text-expense {
+  user-select: none;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.logo-text-tracker {
+  user-select: none;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Navbar Logo Styling */
+.logo-navbar {
+  gap: 0.75rem;
+}
+
+.logo-navbar .logo-icon-container {
+  flex-shrink: 0;
+}
+
+.logo-navbar .logo-text-container {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.logo-navbar:hover .expense-logo {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.logo-navbar:hover .logo-text-expense {
+  transform: translateX(2px);
+}
+
+.logo-navbar:hover .logo-text-tracker {
+  transform: translateX(2px);
+}
+
+/* Vertical Logo (Login Page) */
+.logo-vertical {
+  gap: 1rem;
+  text-align: center;
+}
+
+.logo-vertical .logo-text-container {
+  text-align: center;
+}
+
+.logo-vertical:hover .expense-logo {
+  transform: scale(1.1) translateY(-3px);
+}
+
+.logo-vertical:hover .logo-text-expense {
+  transform: translateY(-2px);
+}
+
+.logo-vertical:hover .logo-text-tracker {
+  transform: translateY(-2px);
+}
+
+/* Navbar Brand Styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-1px);
+}
+
+.navbar-brand .logo-wrapper {
+  margin: 0;
+}
+
+/* Login Page Logo Styling */
+.login-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.login-logo-container .expense-logo {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.login-logo-container:hover .expense-logo {
+  animation: none;
+  transform: scale(1.15) translateY(-5px);
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
+}
+
+/* Professional polish */
+.logo-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.logo-wrapper:hover::before {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-navbar .logo-text-container {
+    display: none;
+  }
+  
+  .logo-navbar {
+    gap: 0.5rem;
+  }
+}
